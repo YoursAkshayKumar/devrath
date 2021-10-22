@@ -49,7 +49,7 @@ class Home extends CI_Controller
 			'<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.magnific-popup.min.js" type="text/javascript" ></script>',
 			'<script  src="' . base_url() . 'assets/devrath/js/lib/SmoothScroll.js" type="text/javascript" ></script>',
 		
-			'<script uery.f' . base_url() . 'assets/devrath/orm.min.js" type="text/javascript" src="js/lib/jq ></script>',
+			// '<script  src="' . base_url() . 'assets/devrath/orm.min.js" type="text/javascript"></script>',
 			'<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.validate.min.js" type="text/javascript" ></script>',
 		
 			'<script  src="' . base_url() . 'assets/devrath/js/scripts.js" type="text/javascript" ></script>',
@@ -69,29 +69,29 @@ class Home extends CI_Controller
 		// Sliders
 		$data['sliders'] = $this->home_model->getWebsiteSliders();
 
-		// // Main Navbar
-		// $data['navigations'] = $this->home_model->getNavigation();
+		// Main Navbar
+		$data['navigations'] = $this->home_model->getNavigation();
 
-		// // Our Services
-		// $data['services'] = $this->home_model->getCategoryProduct(3);
+		// Our Services
+		$data['services'] = $this->home_model->getCategoryProduct(3);
 
-		// // Our Counter
-		// $data['counters'] = $this->home_model->getCounters();
+		// Our Counter
+		$data['counters'] = $this->home_model->getCounters();
 
-		// // Gallery
-		// $data['galleries'] = $this->home_model->getGallery();
+		// Gallery
+		$data['galleries'] = $this->home_model->getGallery();
 
-		// // Partners
-		// $data['partners'] = $this->home_model->getPartner();
+		// Partners
+		$data['partners'] = $this->home_model->getPartner();
 
-		// // Blogs
-		// $data['blog4home'] = $this->home_model->getBlogsOnly(3);
+		// Blogs
+		$data['blog4home'] = $this->home_model->getBlogsOnly(3);
 
-		// // Blogs
-		// $data['testimonials'] = $this->home_model->getTestimonials(3);
+		// Blogs
+		$data['testimonials'] = $this->home_model->getTestimonials(3);
 
-		// // Social Links
-		// $data['sociallinks'] = $this->home_model->getSocialLinks();
+		// Social Links
+		$data['sociallinks'] = $this->home_model->getSocialLinks();
 
 		$this->load->view('includes/header', $data);
 		$this->load->view('includes/navigation', $data);
