@@ -81,6 +81,9 @@ class Home extends CI_Controller
 		// Gallery
 		$data['galleries'] = $this->home_model->getGallery();
 
+		// Gallery Category
+		$data['galleriescat'] = $this->home_model->getGalleryCategory();
+
 		// Partners
 		$data['partners'] = $this->home_model->getPartner();
 

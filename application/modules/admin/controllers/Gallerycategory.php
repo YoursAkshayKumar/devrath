@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Sliders extends Admin_Base_Controller
+class Gallerycategory extends Admin_Base_Controller
 {
 
     public function __construct()
@@ -11,6 +11,7 @@ class Sliders extends Admin_Base_Controller
         $this->load->library('grocery_CRUD');
         $this->setTemplateFile('grocery_view');
         $this->load->model('settings_model');
+        $this->load->helper('simple_helper');
 
         // check librarians groups or not
         $group = 'admin';
@@ -22,36 +23,34 @@ class Sliders extends Admin_Base_Controller
 
     public function index()
     {
+
         try {
 
             // Grocery settings getGroceryCRUD( $TableName, $Subject, $PageTitle, $Breadcrumbs )
-            $crud = $this->getGroceryCRUD('sliders', 'Sliders', 'Manage Sliders', 'Manage Sliders');
+            $crud = $this->getGroceryCRUD('gallery_category', 'Gallery Category', 'Manage Gallery Category', 'Manage Gallery Category');
 
             // data Grid view fields
-            $crud->columns('name', 'sub_title', 'link', 'sort', 'created', 'logo_file_path', 'file_path');
+            $crud->columns('catname', 'link', 'sort');
 
             // Insert form
-            $crud->add_fields('name', 'sub_title', 'link', 'sort', 'logo_file_path', 'file_path');
+            $crud->add_fields('catname', 'link','sort');
 
             // Update form
-            $crud->edit_fields('name', 'sub_title', 'link', 'sort', 'logo_file_path', 'file_path');
+            $crud->edit_fields('catname', 'link','sort');
 
             //File upload
-            $crud->set_field_upload('file_path', 'assets/devrath/images/slider');
-            
-            $crud->set_field_upload('logo_file_path', 'assets/devrath/images/slider');
+
+            //$crud->set_field_upload('file_path', 'assets/frontend/images/categories');
 
             // Required fields
-            $crud->required_fields('file_path', 'sort');
+            $crud->required_fields('catname', 'link', 'sort');
 
             // Rename field level
-            $crud->display_as('file_path', 'Slider(w1903 x h1083)');
-            $crud->display_as('logo_file_path', 'Logo(w200 x h120)');
-            $crud->display_as('sub_title', 'Sub Title');
+            $crud->display_as('catname', 'Name');
             $crud->display_as('sort', 'Sort Order');
 
-            $crud->callback_read_field('file_path', array($this, '_callback_view_photo'));
-            $crud->callback_read_field('logo_file_path', array($this, '_callback_view_photo'));
+            //$crud->callback_read_field('file_path', array($this, '_callback_view_photo'));
+            $crud->callback_column('link', array($this, '_callback_link'));
 
             // $crud->unset_add();
             $crud->unset_export();
@@ -70,10 +69,17 @@ class Sliders extends Admin_Base_Controller
 
 
     // view user image in column
-    public function _callback_view_photo($value, $row)
+    // public function _callback_view_photo($value, $row)
+    // {
+    //     $image_url = base_url('assets/frontend/images/categories/' . $value);
+    //     return "<a href=$image_url class='fancybox'><img class='img-responsive img-thumbnail' src=$image_url  width='200px'/></a>";
+    // }
+
+    // view user image in column
+    public function _callback_link($value, $row)
     {
-        $image_url = base_url('assets/devrath/images/slider/' . $value);
-        return "<a href=$image_url class='fancybox'><img class='img-responsive img-thumbnail' src=$image_url  width='200px'/></a>";
+        $seoURL = makeSeo($value);
+        return $seoURL;
     }
 
     // initial setup of grocery crud by table name, theme and others

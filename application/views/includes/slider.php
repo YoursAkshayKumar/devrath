@@ -7,14 +7,15 @@
                   <?php
                     if ($sliders) {
                          foreach ($sliders as $slider) {
+                              
                     ?>
 
 
                             <li data-transition="fade">
-                                 <img src="<?php echo base_url() . '/assets/devrath/images/slider/' . $slider->logo_file_path; ?>" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
+                                 <img src="<?php echo base_url() . '/assets/devrath/images/slider/' . $slider->file_path; ?>" data-bgposition="left center" data-duration="14000" data-bgpositionend="right center" alt="">
 
                                  <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="center" data-y="100" data-speed="700" data-start="1500" data-easing="easeOutBack">
-                                      <img src="<?php echo base_url() . '/assets/devrath/images/slider/' . $slider->file_path; ?>" alt="icons">
+                                      <img src="<?php echo base_url() . '/assets/devrath/images/slider/' . $slider->logo_file_path; ?>" alt="icons">
                                  </div>
 
                                  <div class="tp-caption sft fadeout slider-caption-sub slider-caption-1" data-x="center" data-y="240" data-speed="700" data-start="1500" data-easing="easeOutBack">

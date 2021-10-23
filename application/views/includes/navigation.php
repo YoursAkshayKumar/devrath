@@ -20,8 +20,8 @@
                 <!-- <span class="login-register">
                     <a href="login.html">Login </a>
                     <a href="register.html"> Register</a>
-                </span> -->
-                <!-- <div class="dropdown currency">
+                </span> 
+                <div class="dropdown currency">
                     <span>USD <i class="fa fa"></i></span>
                     <ul>
                         <li class="active"><a href="#">USD</a></li>

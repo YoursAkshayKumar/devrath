@@ -143,6 +143,21 @@ class Home_model extends CI_Model
         return false;
     }
 
+    // Gallery  categories
+
+    public function getGalleryCategory()
+    {
+        $query = $this->db->order_by('sort', 'ASC')->get('gallery_category');
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+       
+       
+
     // Partner 
     public function getPartner()
     {

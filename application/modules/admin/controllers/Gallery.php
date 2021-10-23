@@ -28,23 +28,31 @@ class Gallery extends Admin_Base_Controller
             $crud = $this->getGroceryCRUD('gallery', 'Gallery', 'Manage Gallery', 'Manage Gallery');
 
             // data Grid view fields
-            $crud->columns('title', 'description', 'sort', 'file_path');
+            $crud->columns('title', 'description', 'sort', 'catid', 'file_path');
 
             // Insert form
-            $crud->add_fields('title', 'description', 'sort', 'file_path');
+            $crud->add_fields('title', 'description', 'sort', 'catid', 'file_path');
 
             // Update form
-            $crud->edit_fields('title', 'description', 'sort', 'file_path');
+            $crud->edit_fields('title', 'description', 'sort', 'catid', 'file_path');
 
             //File upload
-            $crud->set_field_upload('file_path', 'assets/frontend/images/gallery');
+            $crud->set_field_upload('file_path', 'assets/devrath/images/gallery');
 
             // Required fields
             $crud->required_fields('file_path', 'title', 'description', 'sort');
 
+            //   // Required fields
+            //   $crud->required_fields('id', 'catname', 'sort', 'file_path');
+
+              // relationship
+              $crud->set_relation('catid', 'gallery_category', 'catname');
+
+
             // Rename field level
             $crud->display_as('file_path', 'Gallery(w600x h400)');
             $crud->display_as('sort', 'Sort Order');
+            $crud->display_as('class', 'Category');
 
             $crud->callback_read_field('file_path', array($this, '_callback_view_photo'));
 
@@ -67,7 +75,7 @@ class Gallery extends Admin_Base_Controller
     // view user image in column
     public function _callback_view_photo($value, $row)
     {
-        $image_url = base_url('assets/frontend/images/gallery/' . $value);
+        $image_url = base_url('assets/devrath/images/gallery/' . $value);
         return "<a href=$image_url class='fancybox'><img class='img-responsive img-thumbnail' src=$image_url  width='200px'/></a>";
     }
 

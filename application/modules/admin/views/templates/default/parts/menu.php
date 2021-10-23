@@ -59,7 +59,7 @@
 
 
             <li class="treeview menu-open">
-            <a href="#">
+           
                 <a href="<?php echo site_url('admin/navigation'); ?>">
                     <i class="fa fa-list-alt"></i> <span>Navigation</span>
                     <span class="pull-right-container">
@@ -100,11 +100,28 @@
                 </a>
             </li>
 
-            <li class="treeview">
+            
+            <li class="treeview menu-open">
+           
+                <a href="<?php echo site_url('admin/gallery'); ?>">
+                    <i class="fa fa-list-alt"></i> <span>Gallery</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+                 </span>
+                </a>
+
+                <ul class="treeview-menu" style="">
+                    <li><a href="<?php echo site_url('admin/gallerycategory'); ?>"><i class="fa fa-photo"></i>Gallery Category</a></li>
+                    <li><a href="<?php echo site_url('admin/gallery'); ?>"><i class="fa fa-photo"></i> Gallery</a></li>
+                    
+                </ul>
+            </li>
+
+            <!-- <li class="treeview">
                 <a href="<?php echo site_url('admin/gallery'); ?>">
                     <i class="fa fa-photo"></i> <span>Gallery</span>
                 </a>
-            </li>
+            </li> -->
 
             <li class="treeview">
                 <a href="<?php echo site_url('admin/partners'); ?>">

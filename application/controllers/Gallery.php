@@ -38,10 +38,13 @@ class Gallery extends CI_Controller
 
 
     $data['scripts'] = array(
+
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery-1.11.0.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery-ui.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/bootstrap.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/bootstrap-select.js" type="text/javascript" ></script>',
+        ' <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>',
+        '<script  src="' . base_url() . 'assets/devrath/js/lib/isotope.pkgd.min.js" type="text/javascript"></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.themepunch.revolution.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.themepunch.tools.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/owl.carousel.js" type="text/javascript" ></script>',
@@ -51,13 +54,27 @@ class Gallery extends CI_Controller
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.parallax-1.1.3.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.magnific-popup.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/SmoothScroll.js" type="text/javascript" ></script>',
-    
-        '<script uery.f' . base_url() . 'assets/devrath/orm.min.js" type="text/javascript" src="js/lib/jq ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.validate.min.js" type="text/javascript" ></script>',
-    
         '<script  src="' . base_url() . 'assets/devrath/js/scripts.js" type="text/javascript" ></script>',
     );
 
+
+    // <script type="text/javascript" src="js/lib/jquery-1.11.0.min.js"></script>
+    // <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script>
+    // <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+    // <script type="text/javascript" src="js/lib/bootstrap-select.js"></script>
+    // <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>
+    // <script type="text/javascript" src="js/lib/isotope.pkgd.min.js"></script>
+    // <script type="text/javascript" src="js/lib/jquery.themepunch.revolution.min.js"></script>
+    // <script type="text/javascript" src="js/lib/jquery.themepunch.tools.min.js"></script>
+    // <script type="text/javascript" src="js/lib/owl.carousel.js"></script>
+    // <script type="text/javascript" src="js/lib/jquery.appear.min.js"></script>
+    // <script type="text/javascript" src="js/lib/jquery.countTo.js"></script>
+    // <script type="text/javascript" src="js/lib/jquery.countdown.min.js"></script>
+    // <script type="text/javascript" src="js/lib/jquery.parallax-1.1.3.js"></script>
+    // <script type="text/javascript" src="js/lib/jquery.magnific-popup.min.js"></script>
+    // <script type="text/javascript" src="js/lib/SmoothScroll.js"></script>
+    // <script type="text/javascript" src="js/scripts.js"></script>
 
 
     
@@ -89,17 +106,21 @@ class Gallery extends CI_Controller
         // $data['settings'] = $setting;
 
 
-        // // Main Navbar
-        // $data['navigations'] = $this->home_model->getNavigation();
+        // Main Navbar
+        $data['navigations'] = $this->home_model->getNavigation();
 
-        // // Gallery
-        // $data['galleries'] = $this->home_model->getGallery();
+        // Gallery
+        $data['galleries'] = $this->home_model->getGallery();
 
-        // // Partners
-        // $data['partners'] = $this->home_model->getPartner();
+        
+		// Gallery Category
+		$data['galleriescat'] = $this->home_model->getGalleryCategory();
 
-        // // Social Links
-        // $data['sociallinks'] = $this->home_model->getSocialLinks();
+        // Partners
+        $data['partners'] = $this->home_model->getPartner();
+
+        // Social Links
+        $data['sociallinks'] = $this->home_model->getSocialLinks();
 
         $this->load->view('includes/header', $data);
         $this->load->view('includes/navigation', $data);

@@ -53,6 +53,7 @@
       max-height: 66px;
       width: auto; }
     #header.header-v3 .header_top .header_left, #header.header-v3 .header_top .header_right {
+      width: 375px !important;
       line-height: 50px; }
     #header.header-v3 .header_top .dropdown ul {
       top: 42px; }
