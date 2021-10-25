@@ -131,6 +131,8 @@ class Home_model extends CI_Model
         return false;
     }
 
+
+
     // Gallery 
     public function getGallery()
     {
@@ -206,4 +208,46 @@ class Home_model extends CI_Model
         }
         return false;
     }
+
+ // Rooms ===========================
+    public function getSeoURLRooms($seourl)
+    {
+        $this->db->select('rooms.*,categories.catname,categories.link');
+        $this->db->join('categories', 'categories.id=rooms.pid', 'left');
+        $this->db->where('seourl', $seourl);
+        $this->db->where('status', 'active');
+
+        $query = $this->db->get('rooms');
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+
+    public function checkSeoURLRooms($seourl)
+    {
+        $query = $this->db->where('seourl', $seourl)->where('status', 'active')->get('rooms');
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return true;
+        }
+        return false;
+    }
+
+    public function getRoomsOnly($no)
+    {
+        $query = $this->db->where('status', 'active')->order_by('id', 'DESC')->get('rooms', 3);
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+
+
 }

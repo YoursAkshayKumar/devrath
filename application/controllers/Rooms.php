@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Blog extends CI_Controller
+class Rooms extends CI_Controller
 {
 	function __construct()
 	{
@@ -75,7 +75,7 @@ class Blog extends CI_Controller
 		// );
 
 		// Check Page created or not
-		$chkBlogData = $this->home_model->checkSeoURLPages($seourl);
+		$chkRoomData = $this->home_model->checkSeoURLRooms($seourl);
 
 
 		// Main Navbar
@@ -83,7 +83,7 @@ class Blog extends CI_Controller
 
 
 		// 404
-		if (!$chkBlogData) {
+		if (!$chkRoomData) {
 			$data['metatags'] = array();
 			$setting = $this->home_model->getWebsiteSettings();
 			$data['logo'] = $setting['logo'];
@@ -103,24 +103,24 @@ class Blog extends CI_Controller
 			$this->load->view('404', $data);
 			$this->load->view('includes/footer', $data);
 		} else {
-			// Blog Page
-			$BlogData = $this->home_model->getSeoURLPages($seourl);
+			// room Page
+			$RoomData = $this->home_model->getSeoURLRooms($seourl);
 
 			// Get Website Settings
-			$setting = $this->home_model->getWebsiteSettings();
-			$data['title'] = "Home | " . $setting['name'];
-			$data['logo'] = $setting['logo'];
-			$data['footer_logo'] = $setting['footer_logo'];
-			$data['footer_about'] = $setting['footer_about'];
-			$data['alt'] = $setting['name'];
-			$data['settings'] = $setting;
+			// $setting = $this->home_model->getWebsiteSettings();
+			// $data['title'] = "Home | " . $setting['name'];
+			// $data['logo'] = $setting['logo'];
+			// $data['footer_logo'] = $setting['footer_logo'];
+			// $data['footer_about'] = $setting['footer_about'];
+			// $data['alt'] = $setting['name'];
+			// $data['settings'] = $setting;
 
 			// Sliders
-			$data['blog'] = $BlogData;
-			// print_r($BlogData);
-			// exit;
+			$data['room'] = $RoomData;
+			print_r($RoomData);
+			exit;
 
-			$data['metatags'] = $BlogData[0]->metatags;
+			$data['metatags'] = $RoomData[0]->metatags;
 
 			// Partners
 			$data['partners'] = $this->home_model->getPartner();
@@ -130,7 +130,7 @@ class Blog extends CI_Controller
 
 			$this->load->view('includes/header', $data);
 			$this->load->view('includes/navigation', $data);
-			$this->load->view('blog_view', $data);
+			$this->load->view('room_view', $data);
 			$this->load->view('includes/footer', $data);
 		}
 	}
@@ -177,7 +177,7 @@ class Blog extends CI_Controller
 		'<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.magnific-popup.min.js" type="text/javascript" ></script>',
 		'<script  src="' . base_url() . 'assets/devrath/js/lib/SmoothScroll.js" type="text/javascript" ></script>',
 	
-		// '<script  src="' . base_url() . 'assets/devrath/orm.min.js" type="text/javascript"></script>',
+		
 		'<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.validate.min.js" type="text/javascript" ></script>',
 	
 		'<script  src="' . base_url() . 'assets/devrath/js/scripts.js" type="text/javascript" ></script>',
@@ -202,7 +202,7 @@ class Blog extends CI_Controller
 		// );
 
 		// Main Navbar
-		// $data['navigations'] = $this->home_model->getNavigation();
+		$data['navigations'] = $this->home_model->getNavigation();
 
 		// // Get Website Settings
 		// $setting = $this->home_model->getWebsiteSettings();
@@ -213,8 +213,8 @@ class Blog extends CI_Controller
 		// $data['alt'] = $setting['name'];
 		// $data['settings'] = $setting;
 
-		// Blogs
-		$data['blog4home'] = $this->home_model->getBlogsOnly(3);
+		// rooms
+		$data['room4home'] = $this->home_model->getRoomsOnly(3);
 
 		// Partners
 		$data['partners'] = $this->home_model->getPartner();
@@ -224,7 +224,7 @@ class Blog extends CI_Controller
 
 		$this->load->view('includes/header', $data);
 		$this->load->view('includes/navigation', $data);
-		$this->load->view('blogs_all_view', $data);
+		$this->load->view('rooms_all_view', $data);
 		$this->load->view('includes/footer', $data);
 	}
 }

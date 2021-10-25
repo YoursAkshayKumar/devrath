@@ -94,6 +94,13 @@
                 </a>
             </li>
 
+            
+            <li class="treeview">
+                <a href="<?php echo site_url('admin/rooms/all'); ?>">
+                    <i class="fa fa-book"></i> <span>Rooms</span>
+                </a>
+            </li>
+
             <li class="treeview">
                 <a href="<?php echo site_url('admin/sliders'); ?>">
                     <i class="fa fa-bookmark-o"></i> <span>Sliders</span>
