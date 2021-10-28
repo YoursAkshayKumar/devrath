@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Rooms extends CI_Controller
+class Room extends CI_Controller
 {
 	function __construct()
 	{
@@ -76,6 +76,7 @@ class Rooms extends CI_Controller
 
 		// Check Page created or not
 		$chkRoomData = $this->home_model->checkSeoURLRooms($seourl);
+		
 
 
 		// Main Navbar
@@ -117,8 +118,8 @@ class Rooms extends CI_Controller
 
 			// Sliders
 			$data['room'] = $RoomData;
-			print_r($RoomData);
-			exit;
+			// print_r($RoomData);
+			// exit;
 
 			$data['metatags'] = $RoomData[0]->metatags;
 

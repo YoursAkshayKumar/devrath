@@ -57,14 +57,14 @@ class Home extends CI_Controller
 
 
 
-		// // Get Website Settings
-		// $setting = $this->home_model->getWebsiteSettings();
-		// $data['title'] = "Home | " . $setting['name'];
-		// $data['logo'] = $setting['logo'];
-		// $data['footer_logo'] = $setting['footer_logo'];
-		// $data['footer_about'] = $setting['footer_about'];
-		// $data['alt'] = $setting['name'];
-		// $data['settings'] = $setting;
+		// Get Website Settings
+		$setting = $this->home_model->getWebsiteSettings();
+		$data['title'] = "Home | " . $setting['name'];
+		$data['logo'] = $setting['logo'];
+		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_about'] = $setting['footer_about'];
+		$data['alt'] = $setting['name'];
+		$data['settings'] = $setting;
 
 		// Sliders
 		$data['sliders'] = $this->home_model->getWebsiteSliders();
@@ -89,6 +89,10 @@ class Home extends CI_Controller
 
 		// Blogs
 		$data['blog4home'] = $this->home_model->getBlogsOnly(3);
+
+		
+		// Rooms
+		$data['room4home'] = $this->home_model->getRoomsOnly(3);
 
 		// Blogs
 		$data['testimonials'] = $this->home_model->getTestimonials(3);

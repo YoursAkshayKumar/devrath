@@ -31,14 +31,14 @@ class Rooms extends Admin_Base_Controller
             $crud->columns('status', 'seourl', 'category', 'file_path', 'author');
 
             // Insert form
-            $crud->add_fields('pid', 'seourl', 'title', 'short', 'category', 'status', 'author', 'content', 'file_path', 'blog_home', 'metatags');
+            $crud->add_fields('pid', 'seourl', 'title', 'short', 'category', 'status', 'author', 'content', 'file_path', 'room_home', 'metatags');
 
             // Update form
-            $crud->edit_fields('pid', 'seourl', 'title', 'short', 'category', 'status', 'author', 'content', 'file_path', 'blog_home', 'metatags');
+            $crud->edit_fields('pid', 'seourl', 'title', 'short', 'category', 'status', 'author', 'content', 'file_path', 'room_home', 'metatags');
 
             //File upload
-            $crud->set_field_upload('file_path', 'assets/frontend/images/blogs');
-            $crud->set_field_upload('blog_home', 'assets/frontend/images/blogs');
+            $crud->set_field_upload('file_path', 'assets/devrath/images/rooms');
+            $crud->set_field_upload('room_home', 'assets/devrath/images/rooms');
 
             // Required fields
             $crud->required_fields('seourl', 'title', 'short', 'category', 'author', 'content', 'file_path');
@@ -48,10 +48,12 @@ class Rooms extends Admin_Base_Controller
             $crud->display_as('seourl', 'SeoURL');
             $crud->display_as('category', 'Room Category');
             $crud->display_as('file_path', 'Banner(w1903 x h531)');
-            $crud->display_as('blog_home', 'Blog(home) Only(w600 x h400)');
+            $crud->display_as('room_home', 'Room(home) Only(w600 x h400)');
             $crud->display_as('short', 'Short Description');
 
             $crud->callback_read_field('file_path', array($this, '_callback_view_photo'));
+            $crud->callback_read_field('room_home', array($this, '_callback_view_photo'));
+           
             $crud->set_relation('pid', 'categories', 'catname');
             // $crud->unset_add();
             $crud->unset_export();

@@ -5,17 +5,31 @@
     <div class="header_top">
         <div class="container">
             <div class="header_left float-left">
-                <span><i class="lotus-icon-cloud"></i> 18 °C</span>
-                <span><i class="lotus-icon-location"></i> 225 Beach Street, Australian</span>
-                <span><i class="lotus-icon-phone"></i> 1-548-854-8898</span>
+                <!-- <span><i class="lotus-icon-cloud"></i> 18 °C</span> -->
+                <span><i class="lotus-icon-location"></i><?php echo $settings['address']; ?></span>
+                <span><i class="lotus-icon-phone"></i><?php echo $settings['phone']; ?></span>
             </div>
 
             <div class="header_right float-right">
                 <span class="socials">
-                    <a href="!#"><i class="fa fa-facebook"></i></a>
-                    <a href="!#"><i class="fa fa-twitter"></i></a>
-                    <a href="!#"><i class="fa fa-pinterest-p"></i></a>
-                    <a href="!#"><i class="fa fa-youtube"></i></a>
+                <?php
+                    if (!empty($sociallinks)) {
+                ?>
+                        <div class="social-icon">
+                            <?php
+                            foreach ($sociallinks as $sociallink) {
+                            ?>
+                             <a target="_blank" href="<?php echo $sociallink->link; ?>"><i class="<?php echo $sociallink->fa_icon; ?>"></i></a>
+                                <!-- <a class="mr20" target="_blank" href="<?php echo $sociallink->link; ?>"><i class="<?php echo $sociallink->fa_icon; ?> f20"></i></a> -->
+                            <?php
+                            }
+                            ?>
+                        </div>
+                <?php
+                }
+                ?>
+                
+                  
                 </span>
                 <!-- <span class="login-register">
                     <a href="login.html">Login </a>

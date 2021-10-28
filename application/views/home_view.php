@@ -562,25 +562,43 @@
                         </div>
                     </div>
                     <div class="guestbook-content text-center owl-single">
+
+
+
+                            <?php
+                            if (!empty($testimonials)) {
+                            ?>
+
+                            <?php
+                            foreach ($testimonials as $testimonial) {
+                            ?>
+
                             <!-- ITEM -->
                             <div class="guestbook-item">
                                 <div class="text">
-                                    <p class="f20">"This is the only place to stay in Catalina! I have stayed in the
-                                        cheaper hotels and they were fine, but this is just the icing on the cake! After
-                                        spending the day bike riding and hiking to come back and enjoy a glass of wine
-                                        while looking out your ocean view window and then to top it all off"</p>
+                                    <p class="f20"><?php echo $testimonial->short_desc; ?></p>
                                 </div>
                                 <div class="img">
-                                    <img src="<?php echo base_url(); ?>/assets/devrath/images/avatar/img-15.png" alt="">
+                                    <img src="<?php echo base_url(); ?>assets/devrath/images/testimonials/<?php echo $testimonial->file_path; ?>" alt="">
                                 </div>
                                 <div class="info-author">
-                                    <span class="f20 c-main"><strong>Rosalind Cloer</strong></span><br>
-                                    <span class="f14">Oxford</span>
+                                    <span class="f20 c-main"><strong><?php echo $testimonial->name; ?></strong></span><br>
+                                    <span class="f14"><?php echo $testimonial->address; ?></span>
                                 </div>
                             </div>
                             <!-- ITEM -->
+                            <?php
+                                }
+                            ?>
+
+                            <?php
+                                }
+                            ?>
+
+
+
                             <!-- ITEM -->
-                            <div class="guestbook-item">
+                            <!-- <div class="guestbook-item">
                                 <div class="text">
                                     <p class="f20">This is the only place to stay in Catalina! I have stayed in the
                                         cheaper hotels and they were fine, but this is just the icing on the cake! After
@@ -594,10 +612,10 @@
                                     <span class="f20 c-main"><strong>Seelentag</strong></span><br>
                                     <span class="f14">From Los Angeles, California</span>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ITEM -->
                             <!-- ITEM -->
-                            <div class="guestbook-item">
+                            <!-- <div class="guestbook-item">
                                 <div class="text">
                                     <p class="f20">This is the only place to stay in Catalina! I have stayed in the
                                         cheaper hotels and they were fine, but this is just the icing on the cake! After
@@ -611,7 +629,7 @@
                                     <span class="f20 c-main"><strong>Seelentag</strong></span><br>
                                     <span class="f14">From Los Angeles, California</span>
                                 </div>
-                            </div>
+                            </div> -->
                             <!-- ITEM -->
 
                         </div>

@@ -38,7 +38,7 @@ class Settings extends Admin_Base_Controller
             // $crud->add_fields('name', 'reg', 'established', 'address', 'founder', 'slogan', 'footer_about', 'contact', 'file_path', 'footer_logo', 'cre_or_up_date', 'cre_or_up_by');
 
             // Update form
-            $crud->edit_fields('status', 'name', 'reg', 'established', 'address', 'founder', 'slogan', 'footer_about', 'email', 'contact', 'file_path', 'footer_logo', 'cre_or_up_date', 'cre_or_up_by');
+            $crud->edit_fields('status', 'name', 'established', 'address', 'founder', 'slogan', 'footer_about', 'email', 'contact', 'file_path', 'footer_logo', 'cre_or_up_date', 'cre_or_up_by');
 
             //File upload
             $crud->set_field_upload('file_path', 'assets/images/credit');

@@ -40,7 +40,7 @@ class Testimonial extends Admin_Base_Controller
             $crud->edit_fields('name', 'address', 'file_path', 'short_desc');
 
             //File upload
-            $crud->set_field_upload('file_path', 'assets/frontend/images/testimonials');
+            $crud->set_field_upload('file_path', 'assets/devrath/images/testimonials');
 
             // Required fields
             $crud->required_fields('name', 'address', 'file_path', 'short_desc');
@@ -71,7 +71,7 @@ class Testimonial extends Admin_Base_Controller
     // view user image in column
     public function _callback_view_photo($value, $row)
     {
-        $image_url = base_url('assets/frontend/images/testimonials/' . $value);
+        $image_url = base_url('assets/devrath/images/testimonials/' . $value);
         return "<a href=$image_url class='fancybox'><img class='img-responsive img-thumbnail' src=$image_url  width='200px'/></a>";
     }
 

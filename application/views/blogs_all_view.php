@@ -1,4 +1,4 @@
-<!-- <div class="breadcrumb-wrapper">
+<div class="breadcrumb-wrapper">
     <div class="images-overlay"></div>
     <div class="container">
         <div class="row">
@@ -19,11 +19,11 @@
             </div>
         </div>
     </div>
-</div> -->
+</div>
 <!-- About Us area -->
 
 <!-- Blog Wrapper Start -->
-<!-- <?php
+<?php
 if (!empty($blog4home)) {
 ?>
     <section class="blog-wrapper">
@@ -63,5 +63,5 @@ if (!empty($blog4home)) {
 
 <?php
 }
-?> -->
+?>
 <!-- Blog Wrapper End -->

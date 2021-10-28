@@ -8,12 +8,17 @@ $route['home'] = 'home';
 $route['admin'] = 'auth/login';
 $route['auth'] = 'auth/login';
 $route['blogs'] = 'blog/all';
+$route['rooms'] = 'room/all';
 $route['gallery'] = 'gallery';
 $route['contact-us'] = 'contact';
 $route['contact-us/send'] = 'contact/send';
 
 // Blogs & Pages
 $route['(:any)'] = 'blog/index/$1';
+
+// Rooms
+$route['(:any)'] = 'room/index/$1';
+
 
 
 // Admin

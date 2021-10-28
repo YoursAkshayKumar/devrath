@@ -202,7 +202,7 @@ class Blog extends CI_Controller
 		// );
 
 		// Main Navbar
-		// $data['navigations'] = $this->home_model->getNavigation();
+		$data['navigations'] = $this->home_model->getNavigation();
 
 		// // Get Website Settings
 		// $setting = $this->home_model->getWebsiteSettings();

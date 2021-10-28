@@ -37,18 +37,18 @@
 
                                 <div class="img">
                                     <a href="#">
-                                        <img src="<?php echo base_url(); ?>assets/frontend/images/blogs/<?php echo $room->room_home; ?>" alt="">
+                                        <img src="<?php echo base_url(); ?>assets/devrath/images/rooms/<?php echo $room->file_path; ?>" alt="">
                                     </a>
                                 </div>
 
                                 <div class="text-thumbs">
 
                                     <div class="thumbs">
-                                        <a href="#"><img src="<?php echo base_url(); ?>assets/frontend/images/blogs/<?php echo $room->room_home; ?>" alt=""></a>
+                                        <a href="#"><img src="<?php echo base_url(); ?>assets/devrath/images/rooms/<?php echo $room->room_home; ?>" alt=""></a>
                                     </div>
 
                                     <div class="text">
-                                        <h2><a href="#"><?php echo $room->title; ?></a></h2>
+                                        <h2><a href="<?php echo base_url(); ?><?php echo $room->seourl; ?>"><?php echo $room->title; ?></a></h2>
                                        
                                         <p><?php echo $room->short; ?></p>
                                         <a href="<?php echo base_url(); ?><?php echo $room->seourl; ?>" class="awe-btn awe-btn-13">VIEW DETAILS</a>

@@ -218,6 +218,7 @@ class Home_model extends CI_Model
         $this->db->where('status', 'active');
 
         $query = $this->db->get('rooms');
+        // var_dump($query); exit;
 
         if ($query->num_rows() > 0) {
             $results = $query->result();

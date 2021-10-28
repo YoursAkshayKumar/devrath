@@ -42,12 +42,20 @@
                                 <div class="widget widget_logo clearfix">
                                     <div class="widget-logo text-center">
                                         <div class="img">
-                                            <a href="#"><img class="img-center" src="images/home-3/footer/logo-footer.png" alt=""></a>
+                                            <a href="#"><img class="img-center" src="<?php echo base_url(); ?><?php echo ($footer_logo != "" ? $footer_logo : 'assets/frontend/images/logo.png'); ?>" alt=""></a>
                                         </div>
+                              
                                     </div>
                                 </div>
                                 <div class="widget widget_tripadvisor clearfix">
                                     <div class="tripadvisor text-center">
+                                    <?php
+                                            if (!empty($footer_about)) {
+                                            ?>
+                                                <p><?php echo $footer_about; ?></p>
+                                            <?php
+                                            }
+                                        ?>
                                         <img class="img-center" src="images/home-3/footer/logo-trivision.png" alt="">
                                     </div>
                                 </div>
@@ -57,20 +65,35 @@
                             <div class="widget">
                                 <h4 class="widget-title f20 bold">Information</h4>
                                 <div class="text">
-                                    <p><i class="lotus-icon-location mr10"></i> 225 Beach Street, Australian</p>
-                                    <p><i class="lotus-icon-phone mr10"></i> 1-548-854-8898</p>
-                                    <p><i class="fa fa-envelope-o mr10"></i> <a href="mailto:hello@thelotushotel.com">hello@thelotushotel.com</a>
+                                    <p><i class="lotus-icon-location mr10"></i><?php echo $settings['address']; ?></p>
+                                    <p><i class="lotus-icon-phone mr10"></i><?php echo $settings['phone']; ?></p>
+                                    <p><i class="fa fa-envelope-o mr10"></i> <a href="mailto:<?php echo $settings['email']; ?>"><?php echo $settings['email']; ?></a>
                                     </p>
                                 </div>
                             </div>
                             <div class="widget">
-                                <h4 class="widget-title f20 bold">Payment Accept</h4>
+                                <h4 class="widget-title f20 bold">Follow Us</h4>
                                 <div class="text">
-                                    <a class="mr20" href="!#"><i class="fa fa-facebook f20"></i></a>
-                                    <a class="mr20" href="!#"><i class="fa fa-twitter f20"></i></a>
-                                    <a class="mr20" href="!#"><i class="fa fa-instagram f20"></i></a>
-                                    <a class="mr20" href="!#"><i class="fa fa-pinterest f20"></i></a>
-                                    <a class="mr20" href="!#"><i class="fa fa-tumblr f20"></i></a>
+
+                                <?php
+                                    if (!empty($sociallinks)) {
+                                ?>
+                                        <div class="social-icon">
+                                            <?php
+                                            foreach ($sociallinks as $sociallink) {
+                                            ?>
+                                                <!-- <a target="_blank" href="<?php echo $sociallink->link; ?>"><i class="<?php echo $sociallink->fa_icon; ?>"></i></a> -->
+                                                <a class="mr20" target="_blank" href="<?php echo $sociallink->link; ?>"><i class="<?php echo $sociallink->fa_icon; ?> f20"></i></a>
+                                            <?php
+                                            }
+                                            ?>
+                                        </div>
+                                <?php
+                                }
+                                ?>
+
+
+                                   
                                 </div>
                             </div>
                         </div>
