@@ -8,12 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-   
-    <?php
+
+    <meta name="keywords" content="  <?php
   if (!empty($metatags)) {
     echo $metatags;
   }
-  ?>
+  ?>">
+  
 
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url(); ?>assets/frontend/images/favicon.ico">
@@ -29,7 +30,6 @@
   
 
 
-
   <!-- Stylesheet -->
   <?php
   if (!empty($styles)) {
@@ -39,6 +39,18 @@
   }
   ?>
 
+  <style>
+
+    .section-home-guestbook.home-guestbook-style-2.bg-22 {
+      background: url("<?php echo base_url();?>assets/devrath/images/home-3/<?php echo $testiBackground[0]->file; ?>");
+      background-position: 50% 50%;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: 0; }
+
+
+  </style>
 
 
 

@@ -108,19 +108,18 @@ class Room extends CI_Controller
 			$RoomData = $this->home_model->getSeoURLRooms($seourl);
 
 			// Get Website Settings
-			// $setting = $this->home_model->getWebsiteSettings();
-			// $data['title'] = "Home | " . $setting['name'];
-			// $data['logo'] = $setting['logo'];
-			// $data['footer_logo'] = $setting['footer_logo'];
-			// $data['footer_about'] = $setting['footer_about'];
-			// $data['alt'] = $setting['name'];
-			// $data['settings'] = $setting;
+			$setting = $this->home_model->getWebsiteSettings();
+			$data['title'] = "Home | " . $setting['name'];
+			$data['logo'] = $setting['logo'];
+			$data['footer_logo'] = $setting['footer_logo'];
+			$data['footer_about'] = $setting['footer_about'];
+			$data['alt'] = $setting['name'];
+			$data['settings'] = $setting;
 
 			// Sliders
 			$data['room'] = $RoomData;
-			// print_r($RoomData);
-			// exit;
-
+		
+	
 			$data['metatags'] = $RoomData[0]->metatags;
 
 			// Partners
@@ -205,14 +204,14 @@ class Room extends CI_Controller
 		// Main Navbar
 		$data['navigations'] = $this->home_model->getNavigation();
 
-		// // Get Website Settings
-		// $setting = $this->home_model->getWebsiteSettings();
-		// $data['title'] = "Home | " . $setting['name'];
-		// $data['logo'] = $setting['logo'];
-		// $data['footer_logo'] = $setting['footer_logo'];
-		// $data['footer_about'] = $setting['footer_about'];
-		// $data['alt'] = $setting['name'];
-		// $data['settings'] = $setting;
+		// Get Website Settings
+		$setting = $this->home_model->getWebsiteSettings();
+		$data['title'] = "Home | " . $setting['name'];
+		$data['logo'] = $setting['logo'];
+		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_about'] = $setting['footer_about'];
+		$data['alt'] = $setting['name'];
+		$data['settings'] = $setting;
 
 		// rooms
 		$data['room4home'] = $this->home_model->getRoomsOnly(3);

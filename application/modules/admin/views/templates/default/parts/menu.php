@@ -107,6 +107,16 @@
                 </a>
             </li>
 
+
+ 
+
+
+            <li class="treeview">
+                <a href="<?php echo site_url('admin/facilities'); ?>">
+                    <i class="fa fa-bookmark-o"></i> <span>Facilities</span>
+                </a>
+            </li>
+
             
             <li class="treeview menu-open">
            
@@ -142,11 +152,34 @@
                 </a>
             </li>
 
-            <li class="treeview">
+
+                       
+            <li class="treeview menu-open">
+           
+                <a href="#">
+                    <i class="fa fa-user"></i> <span>Testimonials</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+                 </span>
+                </a>
+
+                <ul class="treeview-menu" style="">
+                    <li><a href="<?php echo site_url('admin/testimonial'); ?>"><i class="fa fa-user"></i>Testimonials</a></li>
+                    <li><a href="<?php echo site_url('admin/testi_image'); ?>"><i class="fa fa-picture-o"></i>Testimonials Background</a></li>
+                    
+
+                </ul>
+            </li>
+
+
+
+
+
+            <!-- <li class="treeview">
                 <a href="<?php echo site_url('admin/testimonial'); ?>">
                     <i class="fa fa-user"></i> <span>Testimonials</span>
                 </a>
-            </li>
+            </li> -->
 
             <li class="treeview">
                 <a href="<?php echo site_url('admin/counters'); ?>">

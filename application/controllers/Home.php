@@ -81,6 +81,9 @@ class Home extends CI_Controller
 		// Gallery
 		$data['galleries'] = $this->home_model->getGallery();
 
+		// Facilities
+		$data['facilities'] = $this->home_model->getfacilities();
+
 		// Gallery Category
 		$data['galleriescat'] = $this->home_model->getGalleryCategory();
 
@@ -92,10 +95,15 @@ class Home extends CI_Controller
 
 		
 		// Rooms
-		$data['room4home'] = $this->home_model->getRoomsOnly(3);
+		$data['room4home'] = $this->home_model->getRoomsOnly(6);
 
-		// Blogs
-		$data['testimonials'] = $this->home_model->getTestimonials(3);
+		// Testiminials
+		$data['testimonials'] = $this->home_model->getTestimonials(6);
+
+		// Testiminials
+		$data['testiBackground'] = $this->home_model->getTestiBackground();
+
+	
 
 		// Social Links
 		$data['sociallinks'] = $this->home_model->getSocialLinks();

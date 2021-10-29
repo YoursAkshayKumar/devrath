@@ -356,13 +356,7 @@
   right: -50px; }
 
 /* ============================ HOME GUEST ============================ */
-.section-home-guestbook.home-guestbook-style-2.bg-22 {
-  background: url("../images/home-3/bgr-guest-book.png");
-  background-position: 50% 50%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: 0; }
+
 
 .section-home-guestbook.home-guestbook-style-2 .home-guestbook {
   color: #fff;

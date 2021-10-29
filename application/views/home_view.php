@@ -59,357 +59,54 @@
                              data-nav="false"
                              data-pagination="false">
                             <div class="row">
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Luxury Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
 
+
+                            
+                                <?php
+                                    if (!empty($room4home)) {
+                                ?>
+                                    <?php
+                                        foreach ($room4home as $room) {
+                                        ?>
+    
+                                    <div class="col-xs-12 col-sm-4">
+                                        <div class="item room-item text-center accomd-modations-room_1">
+                                            <div class="img">
+                                                <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>assets/devrath/images/rooms/<?php echo $room->room_home; ?>"
+                                                                alt="" style="height: 236px; width: 370px;"></a>
+                                            </div>
+                                            <h2 class="title"><a href="<?php echo base_url(); ?><?php echo $room->seourl; ?>"><?php echo $room->title; ?></a></h2>
+                                            <p class="price">
+                                            <?php echo $room->short; ?>
                                             </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
+                                            <div class="info upper">
+                                                <p>
+                                                    <span class="number"><?php echo $room->max_person; ?></span>
+                                                    <span>Max Guest</span>
+                                                </p>
+                                                <p>
+                                                    <span class="number"><?php echo $room->room_size; ?></span>
+                                                    <span>Size M<sup>2</sup></span>
+
+                                                </p>
+                                                <p>
+                                                    <span class="number"><?php echo $room->bedroom; ?></span>
+                                                    <span> Bedroom</span>
+                                                </p>
+                                            </div>
+                                            <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="<?php echo base_url(); ?><?php echo $room->seourl; ?>"> View
+                                                Details</a>
                                         </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
                                     </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Family Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
+                                    <?php 
+                                        }
+                                    ?>
 
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Deluxe Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
+                                <?php 
+                                }
+                                ?>
 
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Couple Room</a></h2>
-                                        <p class="price">
-                                            Start from $480 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
 
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Single Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
-
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Presidential Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
-
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Luxury Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
-
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Family Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
-
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Deluxe Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
-
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Couple Room</a></h2>
-                                        <p class="price">
-                                            Start from $480 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
-
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Single Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
-
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-4">
-                                    <div class="item room-item text-center accomd-modations-room_1">
-                                        <div class="img">
-                                            <a href="#"><img class="img-responsive img-full" src="<?php echo base_url(); ?>/assets/devrath/images/room/img-1.jpg"
-                                                             alt=""></a>
-                                        </div>
-                                        <h2 class="title"><a href="!#">Presidential Room</a></h2>
-                                        <p class="price">
-                                            Start from $120 per day
-                                        </p>
-                                        <div class="info upper">
-                                            <p>
-                                                <span class="number">02</span>
-                                                <span>Max Guest</span>
-                                            </p>
-                                            <p>
-                                                <span class="number">34.5</span>
-                                                <span>Size M<sup>2</sup></span>
-
-                                            </p>
-                                            <p>
-                                                <span class="number">01</span>
-                                                <span> Bedroom</span>
-                                            </p>
-                                        </div>
-                                        <a class="awe-btn awe-btn-default btn-medium font-hind f12 bold" href="!#"> View
-                                            Details</a>
-                                    </div>
-                                </div>
 
                             </div>
                         </div>
@@ -500,50 +197,33 @@
                      data-tablet="3" data-mobile="2"
                      data-nav="true"
                      data-pagination="false">
+                    
+
+
+                   
+
+                <?php
+                    if (!empty($facilities)) {
+                ?>
+                <?php
+                    foreach ($facilities as $facility) {
+                    ?>
                     <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Free Wifi</span>
+                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/facilities/<?php echo $facility->file; ?>" alt="icon">
+                        <span class="font-hind f-500"><?php echo $facility->name; ?></span>
                     </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Car Packing</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Service Room</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Air Conditioner</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Airtel Digital TV</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Luggage</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Car Packing</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Service Room</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Free Wifi</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Air Conditioner</span>
-                    </div>
-                    <div class="item text-center">
-                        <img class="img-responsive mb10" src="<?php echo base_url(); ?>/assets/devrath/images/home-3/icon/icon-11.png" alt="icon">
-                        <span class="font-hind f-500">Airtel Digital TV</span>
-                    </div>
+
+                    <?php  
+                        }
+                    ?>
+                <?php
+                    }
+                ?>
+
+
+
+
+
                 </div>
             </div>
         </div>
@@ -597,40 +277,6 @@
 
 
 
-                            <!-- ITEM -->
-                            <!-- <div class="guestbook-item">
-                                <div class="text">
-                                    <p class="f20">This is the only place to stay in Catalina! I have stayed in the
-                                        cheaper hotels and they were fine, but this is just the icing on the cake! After
-                                        spending the day bike riding and hiking to come back and enjoy a glass of wine
-                                        while looking out your ocean view window and then to top it all off...</p>
-                                </div>
-                                <div class="img">
-                                    <img src="<?php echo base_url(); ?>/assets/devrath/images/avatar/img-5.jpg" alt="">
-                                </div>
-                                <div class="info-author">
-                                    <span class="f20 c-main"><strong>Seelentag</strong></span><br>
-                                    <span class="f14">From Los Angeles, California</span>
-                                </div>
-                            </div> -->
-                            <!-- ITEM -->
-                            <!-- ITEM -->
-                            <!-- <div class="guestbook-item">
-                                <div class="text">
-                                    <p class="f20">This is the only place to stay in Catalina! I have stayed in the
-                                        cheaper hotels and they were fine, but this is just the icing on the cake! After
-                                        spending the day bike riding and hiking to come back and enjoy a glass of wine
-                                        while looking out your ocean view window and then to top it all off...</p>
-                                </div>
-                                <div class="img">
-                                    <img src="<?php echo base_url(); ?>/assets/devrath/images/avatar/img-5.jpg" alt="">
-                                </div>
-                                <div class="info-author">
-                                    <span class="f20 c-main"><strong>Seelentag</strong></span><br>
-                                    <span class="f14">From Los Angeles, California</span>
-                                </div>
-                            </div> -->
-                            <!-- ITEM -->
 
                         </div>
                 </div>

@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Rooms extends Admin_Base_Controller
+class Testi_image extends Admin_Base_Controller
 {
 
     public function __construct()
@@ -11,6 +11,7 @@ class Rooms extends Admin_Base_Controller
         $this->load->library('grocery_CRUD');
         $this->setTemplateFile('grocery_view');
         $this->load->model('settings_model');
+        $this->load->helper('simple_helper');
 
         // check librarians groups or not
         $group = 'admin';
@@ -22,43 +23,39 @@ class Rooms extends Admin_Base_Controller
 
     public function index()
     {
+
         try {
 
             // Grocery settings getGroceryCRUD( $TableName, $Subject, $PageTitle, $Breadcrumbs )
-            $crud = $this->getGroceryCRUD('rooms', 'Rooms', 'Manage Rooms', 'Manage Rooms');
+            $crud = $this->getGroceryCRUD('parallex_image', 'Background Image', 'Manage Background', 'Manage Background');
 
             // data Grid view fields
-            $crud->columns('status', 'seourl', 'category', 'file_path', 'author');
+            $crud->columns('name', 'file');
 
             // Insert form
-            $crud->add_fields('pid', 'seourl', 'title', 'short', 'category', 'status', 'author', 'content', 'file_path', 'room_home', 'max_person', 'bed', 'bedroom', 'view', 'room_size', 'metatags');
+            // $crud->add_fields('name', 'file');
 
             // Update form
-            $crud->edit_fields('pid', 'seourl', 'title', 'short', 'category', 'status', 'author', 'content', 'file_path', 'room_home', 'max_person', 'bed', 'bedroom', 'view', 'room_size', 'metatags');
+            $crud->edit_fields('name', 'file');
 
             //File upload
-            $crud->set_field_upload('file_path', 'assets/devrath/images/rooms');
-            $crud->set_field_upload('room_home', 'assets/devrath/images/rooms');
+
+            $crud->set_field_upload('file', 'assets/devrath/images/home-3');
 
             // Required fields
-            $crud->required_fields('seourl', 'title', 'short', 'category', 'author', 'content', 'file_path');
-            $crud->unset_texteditor(['metatags', 'full_text']);
-            // Rename field level
-            $crud->display_as('pid', 'Category');
-            $crud->display_as('seourl', 'SeoURL');
-            $crud->display_as('category', 'Room Category');
-            $crud->display_as('file_path', 'Banner(w1903 x h531)');
-            $crud->display_as('room_home', 'Room(home) Only(w600 x h400)');
-            $crud->display_as('short', 'Short Description');
+            $crud->required_fields('file');
 
-            $crud->callback_read_field('file_path', array($this, '_callback_view_photo'));
-            $crud->callback_read_field('room_home', array($this, '_callback_view_photo'));
-           
-            $crud->set_relation('pid', 'categories', 'catname');
-            // $crud->unset_add();
+            // Rename field level
+            $crud->display_as('name', 'Name');
+            $crud->display_as('file', 'image(1920w x 680h)');
+
+            $crud->callback_read_field('file', array($this, '_callback_view_photo'));
+            $crud->callback_column('name', array($this, '_callback_link'));
+
+            $crud->unset_add();
             $crud->unset_export();
             $crud->unset_print();
-            // $crud->unset_delete();
+            $crud->unset_delete();
 
             // render output result
             $output = $crud->render();
@@ -74,8 +71,15 @@ class Rooms extends Admin_Base_Controller
     // view user image in column
     public function _callback_view_photo($value, $row)
     {
-        $image_url = base_url('assets/frontend/images/blogs/' . $value);
+        $image_url = base_url('assets/devrath/images/home-3/' . $value);
         return "<a href=$image_url class='fancybox'><img class='img-responsive img-thumbnail' src=$image_url  width='200px'/></a>";
+    }
+
+    // view user image in column
+    public function _callback_link($value, $row)
+    {
+        $seoURL = makeSeo($value);
+        return $seoURL;
     }
 
     // initial setup of grocery crud by table name, theme and others

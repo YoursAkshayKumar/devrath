@@ -196,8 +196,26 @@ class Home_model extends CI_Model
         return false;
     }
 
+
+
+    
+    // Facilities ===========================
+    public function getfacilities()
+    {
+        $query = $this->db->order_by('id', 'ASC')->get('facilities');
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+
+
+
     // Client Says
-    // Social Media ===========================
+    // Testimonials ===========================
     public function getTestimonials($no)
     {
         $query = $this->db->order_by('id', 'DESC')->get('testimonials', $no);
@@ -208,6 +226,21 @@ class Home_model extends CI_Model
         }
         return false;
     }
+
+    // Testimonials  background===========================
+    public function getTestiBackground()
+    {
+        $query = $this->db->order_by('id', 'DESC')->get('parallex_image');
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+
+
 
  // Rooms ===========================
     public function getSeoURLRooms($seourl)
