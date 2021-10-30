@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class About extends CI_Controller
 {
 	function __construct()
 	{
@@ -78,7 +78,7 @@ class Home extends CI_Controller
 		// Our Counter
 		$data['counters'] = $this->home_model->getCounters();
 
-		// Our Counter Background
+        // Our Counter Background
 		$data['countersbackground'] = $this->home_model->getCountersBackground();
 
 		// Gallery
@@ -95,6 +95,10 @@ class Home extends CI_Controller
 
 		// Blogs
 		$data['blog4home'] = $this->home_model->getBlogsOnly(3);
+
+        // About
+		$data['about'] = $this->home_model->getAboutContent();
+
 
 		
 		// Rooms
@@ -113,8 +117,8 @@ class Home extends CI_Controller
 
 		$this->load->view('includes/header', $data);
 		$this->load->view('includes/navigation', $data);
-		$this->load->view('includes/slider', $data);
-		$this->load->view('home_view', $data);
+	
+		$this->load->view('about_view', $data);
 		$this->load->view('includes/footer', $data);
 	}
 }

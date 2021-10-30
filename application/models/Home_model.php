@@ -24,6 +24,8 @@ class Home_model extends CI_Model
         return false;
     }
 
+
+    // Get Counters --------------------
     public function getCounters()
     {
         $query = $this->db->order_by('sort', 'ASC')->get('counters');
@@ -33,6 +35,18 @@ class Home_model extends CI_Model
         }
         return false;
     }
+
+    // Get Counters Background --------------------
+    public function getCountersBackground()
+    {
+        $query = $this->db->order_by('id', 'ASC')->get('counters_background');
+        if ($query->num_rows() > 0) {
+            $result = $query->result();
+            return $result;
+        }
+        return false;
+    }
+    
 
     public function getWebsiteSliders()
     {
@@ -241,6 +255,25 @@ class Home_model extends CI_Model
 
 
 
+    
+   
+    // Team ===========================
+    public function getTeams($no)
+    {
+        $query = $this->db->order_by('sort', 'DESC')->get('team');
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+
+
+
+
+
 
  // Rooms ===========================
     public function getSeoURLRooms($seourl)
@@ -281,6 +314,22 @@ class Home_model extends CI_Model
         }
         return false;
     }
+
+
+
+    // About Us ===========================
+    public function getAboutContent()
+    {
+        $query = $this->db->order_by('id', 'DESC')->get('about');
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+
 
 
 

@@ -21,3 +21,12 @@ foreach ( $css_files as $file ): ?>
 <script type="text/javascript">
 	var BASE_URL = "<?php echo base_url(); ?>";
 </script>
+
+
+<style>
+    .sidebar-menu>li>a {
+    padding: 7px 5px 7px 14px  !important;
+    display: block;
+    }
+
+</style>

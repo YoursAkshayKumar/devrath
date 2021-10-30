@@ -47,7 +47,13 @@
       background-attachment: fixed;
       background-repeat: no-repeat;
       background-size: cover;
-      z-index: 0; }
+      z-index: 0;
+     }
+
+    .bg-10 {
+    background-image: url('<?php echo base_url();?>assets/devrath/images/statics/<?php echo $countersbackground[0]->file; ?>') !important;  
+    }
+
 
 
   </style>

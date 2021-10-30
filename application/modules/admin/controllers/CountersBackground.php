@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Counters extends Admin_Base_Controller
+class CountersBackground extends Admin_Base_Controller
 {
 
     public function __construct()
@@ -11,6 +11,7 @@ class Counters extends Admin_Base_Controller
         $this->load->library('grocery_CRUD');
         $this->setTemplateFile('grocery_view');
         $this->load->model('settings_model');
+        $this->load->helper('simple_helper');
 
         // check librarians groups or not
         $group = 'admin';
@@ -22,24 +23,34 @@ class Counters extends Admin_Base_Controller
 
     public function index()
     {
+
         try {
+
             // Grocery settings getGroceryCRUD( $TableName, $Subject, $PageTitle, $Breadcrumbs )
-            $crud = $this->getGroceryCRUD('counters', 'Statics', 'Manage Statics', 'Manage Statics');
+            $crud = $this->getGroceryCRUD('counters_background', 'Background Image', 'Manage Background', 'Manage Background');
 
             // data Grid view fields
-            $crud->columns('title', 'value', 'sort');
+            $crud->columns('title', 'file');
 
             // Insert form
-            $crud->add_fields('title', 'value', 'sort');
+            $crud->add_fields('title', 'file');
 
             // Update form
-            $crud->edit_fields('title', 'value', 'sort');
+            $crud->edit_fields('title', 'file');
+
+            //File upload
+
+            $crud->set_field_upload('file', 'assets/devrath/images/statics');
 
             // Required fields
-            $crud->required_fields('title', 'value', 'sort');
+            $crud->required_fields('file');
 
             // Rename field level
-            $crud->display_as('sort', 'Sort Order');
+            $crud->display_as('title', 'Title');
+            $crud->display_as('file', 'image(1920w x 360h)');
+
+            $crud->callback_read_field('file', array($this, '_callback_view_photo'));
+            $crud->callback_column('title', array($this, '_callback_link'));
 
             $crud->unset_add();
             $crud->unset_export();
@@ -57,6 +68,19 @@ class Counters extends Admin_Base_Controller
     }
 
 
+    // view user image in column
+    public function _callback_view_photo($value, $row)
+    {
+        $image_url = base_url('assets/devrath/images/statics/' . $value);
+        return "<a href=$image_url class='fancybox'><img class='img-responsive img-thumbnail' src=$image_url  width='200px'/></a>";
+    }
+
+    // view user image in column
+    public function _callback_link($value, $row)
+    {
+        $seoURL = makeSeo($value);
+        return $seoURL;
+    }
 
     // initial setup of grocery crud by table name, theme and others
     public function getGroceryCRUD($TableName, $Subject, $PageTitle, $Breadcrumbs)

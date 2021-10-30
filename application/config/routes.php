@@ -10,6 +10,7 @@ $route['auth'] = 'auth/login';
 $route['blogs'] = 'blog/all';
 $route['rooms'] = 'room/all';
 $route['gallery'] = 'gallery';
+$route['about-us'] = 'about';
 $route['contact-us'] = 'contact';
 $route['contact-us/send'] = 'contact/send';
 

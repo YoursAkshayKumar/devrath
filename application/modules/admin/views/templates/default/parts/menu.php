@@ -94,6 +94,13 @@
                 </a>
             </li>
 
+            <li class="treeview">
+                <a href="<?php echo site_url('admin/about_section'); ?>">
+                    <i class="fa fa-book"></i> <span>About Us</span>
+                </a>
+            </li>
+
+
             
             <li class="treeview">
                 <a href="<?php echo site_url('admin/rooms'); ?>">
@@ -109,8 +116,7 @@
 
 
  
-
-
+     
             <li class="treeview">
                 <a href="<?php echo site_url('admin/facilities'); ?>">
                     <i class="fa fa-bookmark-o"></i> <span>Facilities</span>
@@ -175,17 +181,36 @@
 
 
 
-            <!-- <li class="treeview">
-                <a href="<?php echo site_url('admin/testimonial'); ?>">
-                    <i class="fa fa-user"></i> <span>Testimonials</span>
-                </a>
-            </li> -->
-
             <li class="treeview">
+                <a href="<?php echo site_url('admin/team'); ?>">
+                    <i class="fa fa-user"></i> <span>Team</span>
+                </a>
+            </li>
+
+            <li class="treeview menu-open">
+                
+                <a href="#">
+                    <i class="fa fa-clock-o"></i> <span>Counters</span>
+                    <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+
+                <ul class="treeview-menu" style="">
+                    <li><a href="<?php echo site_url('admin/counters'); ?>"><i class="fa fa-user"></i>Counters</a></li>
+                    <li><a href="<?php echo site_url('admin/countersbackground'); ?>"><i class="fa fa-picture-o"></i>Counters Background</a></li>
+                    
+
+                </ul>
+            </li>
+
+
+
+            <!-- <li class="treeview">
                 <a href="<?php echo site_url('admin/counters'); ?>">
                     <i class="fa fa-clock-o"></i> <span>Counters</span>
                 </a>
-            </li>
+            </li> -->
 
             <li class="treeview">
                 <a href="<?php echo site_url('admin/contactus'); ?>">

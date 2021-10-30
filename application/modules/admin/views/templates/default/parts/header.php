@@ -23,3 +23,12 @@
     echo $before_head;
 }
 ?>
+
+
+<style>
+    .sidebar-menu>li>a {
+    padding: 7px 5px 7px 14px  !important;
+    display: block;
+    }
+
+</style>
