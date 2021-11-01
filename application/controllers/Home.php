@@ -81,6 +81,12 @@ class Home extends CI_Controller
 		// Our Counter Background
 		$data['countersbackground'] = $this->home_model->getCountersBackground();
 
+
+		// About
+		$data['about'] = $this->home_model->getAboutContent();
+
+		
+
 		// Gallery
 		$data['galleries'] = $this->home_model->getGallery();
 

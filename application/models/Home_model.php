@@ -258,7 +258,7 @@ class Home_model extends CI_Model
     
    
     // Team ===========================
-    public function getTeams($no)
+    public function getTeams()
     {
         $query = $this->db->order_by('sort', 'DESC')->get('team');
 

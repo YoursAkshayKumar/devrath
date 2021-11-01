@@ -86,7 +86,7 @@
                                                 </p>
                                                 <p>
                                                     <span class="number"><?php echo $room->room_size; ?></span>
-                                                    <span>Size M<sup>2</sup></span>
+                                                    <span>Size (M<sup>2</sup>)</span>
 
                                                 </p>
                                                 <p>
@@ -182,26 +182,26 @@
 
 
     <section class="section-home-about bg-white">
-            <div class="container">
-                <div class="home-about">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="img">
-                                <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/home/about/img-1.jpg" alt=""></a>
-                            </div>
+        <div class="container">
+            <div class="home-about">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="img">
+                            <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/about/<?php echo $about[0]->file_path; ?>" alt=""></a>
                         </div>
-                        <div class="col-md-6">
-                            <div class="text">
-                                <h2 class="heading">ABOUT US</h2>
-                                <span class="box-border"></span>
-                                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source</p>
-                                <a href="#" class="awe-btn awe-btn-default">READ MORE</a>
-                            </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="text">
+                            <h2 class="heading"><?php echo $about[0]->title_one; ?></h2>
+                            <span class="box-border"></span>
+                            <p><?php echo $about[0]->content_one; ?></p>
+                            <a href="#" class="awe-btn awe-btn-default">READ MORE</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 

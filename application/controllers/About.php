@@ -107,6 +107,12 @@ class About extends CI_Controller
 		// Testiminials
 		$data['testimonials'] = $this->home_model->getTestimonials(6);
 
+		
+		// Testiminials
+		$data['teamMember'] = $this->home_model->getTeams();
+
+
+
 		// Testiminials
 		$data['testiBackground'] = $this->home_model->getTestiBackground();
 

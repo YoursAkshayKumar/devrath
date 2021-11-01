@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Gallery extends CI_Controller
+class Banquet extends CI_Controller
 {
     function __construct()
     {
@@ -93,7 +93,7 @@ class Gallery extends CI_Controller
 
         $this->load->view('includes/header', $data);
         $this->load->view('includes/navigation', $data);
-        $this->load->view('gallery_view', $data);
+        $this->load->view('banquet_view', $data);
         $this->load->view('includes/footer', $data);
     }
 }

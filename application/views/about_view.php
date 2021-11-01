@@ -125,30 +125,43 @@
                 <div class="row">
 
                     <!-- ITEM -->
+
+                  
+                <?php
+                    if (!empty($teamMember)) {
+                ?>
+                <?php
+                    foreach ($teamMember as $team) {
+                    ?>
                     <div class="col-xs-6 col-md-3">
                         <div class="team_item text-center">
 
                             <div class="img">
-                                <a href=""><img src="<?php echo base_url(); ?>/assets/devrath/images/team/img-1.jpg" alt=""></a>
+                                <a href=""><img src="<?php echo base_url(); ?>/assets/devrath/images/team/<?php echo $team->file_path; ?>" alt=""></a>
                             </div>
 
                             <div class="text">
-                                <h2>JESSICA ALBA</h2>
-                                <span>Manager lotus Hotel</span>
-                                <p>Mea omnium explicari te, eu sit vidit harum fabellas, his no legere feugaitper in laudem malorum epicuri, quod natum evertitur ne per.</p>
+                                <h2><?php echo $team->name; ?></h2>
+                                <span><?php echo $team->designation; ?></span>
+                                <p><?php echo $team->description; ?></p>
                                 <div class="team-share">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-google-plus"></i></a>
+                                    <a href="<?php echo $team->facebook; ?>"><i class="fa fa-facebook"></i></a>
+                                    <a href="<?php echo $team->twitter; ?>"><i class="fa fa-twitter"></i></a>
+                                    <a href="<?php echo $team->instagram; ?>"><i class="fa fa-google-plus"></i></a>
                                 </div>
                             </div>
 
                         </div>
                     </div>
+
+
+                    <?php }
+                    }
+                    ?>
                     <!-- END / ITEM -->
 
                     <!-- ITEM -->
-                    <div class="col-xs-6 col-md-3">
+                    <!-- <div class="col-xs-6 col-md-3">
                         <div class="team_item text-center">
 
                             <div class="img">
@@ -167,11 +180,11 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
                     <!-- END / ITEM -->
 
                     <!-- ITEM -->
-                    <div class="col-xs-6 col-md-3">
+                    <!-- <div class="col-xs-6 col-md-3">
                         <div class="team_item text-center">
 
                             <div class="img">
@@ -190,11 +203,11 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
                     <!-- END / ITEM -->
 
                     <!-- ITEM -->
-                    <div class="col-xs-6 col-md-3">
+                    <!-- <div class="col-xs-6 col-md-3">
                         <div class="team_item text-center">
 
                             <div class="img">
@@ -213,7 +226,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </div> -->
                     <!-- END / ITEM -->
 
                 </div>
