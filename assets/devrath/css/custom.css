@@ -618,11 +618,11 @@ footer.footer-style-3 {
       z-index: 1; }
       footer.footer-style-3 .footer_top .ot-heading h2 {
         color: #fff; }
-
+/* 
 footer .bgr-footer {
   background: url(../images/home-3/footer/footer-center.png) no-repeat !important;
   background-size: cover !important;
-  position: relative; }
+  position: relative; } */
 
 footer .copyright {
   padding: 15px 0;

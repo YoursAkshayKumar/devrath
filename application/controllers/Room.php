@@ -58,22 +58,6 @@ class Room extends CI_Controller
 
 
 
-		// $data['styles'] = array(
-		// 	'<link href="' . base_url() . 'assets/frontend/css/3/bootstrap.min.css" rel="stylesheet">',
-		// 	'<link href="' . base_url() . 'assets/frontend/css/bootstrap.min.css" rel="stylesheet">',
-		// 	'<link href="' . base_url() . 'assets/frontend/css/style.css" rel="stylesheet">',
-		// );
-
-		// $data['scripts'] = array(
-		// 	'<script src="' . base_url() . 'assets/frontend/js/jquery-min.js"></script>',
-		// 	'<script src="' . base_url() . 'assets/frontend/js/popper.min.js"></script>',
-		// 	'<script src="' . base_url() . 'assets/frontend/js/jquery.mainmenu.js"></script>',
-		// 	'<script src="' . base_url() . 'assets/frontend/js/plugins.js"></script>',
-		// 	'<script src="' . base_url() . 'assets/frontend/js/wow.js"></script>',
-		// 	'<script src="' . base_url() . 'assets/frontend/js/magnific-popup.min.js"></script>',
-		// 	'<script src="' . base_url() . 'assets/frontend/js/custom.js"></script>',
-		// );
-
 		// Check Page created or not
 		$chkRoomData = $this->home_model->checkSeoURLRooms($seourl);
 		
@@ -86,18 +70,75 @@ class Room extends CI_Controller
 		// 404
 		if (!$chkRoomData) {
 			$data['metatags'] = array();
-			$setting = $this->home_model->getWebsiteSettings();
-			$data['logo'] = $setting['logo'];
-			$data['alt'] = $setting['name'];
-			$data['footer_logo'] = $setting['footer_logo'];
-			$data['footer_about'] = $setting['footer_about'];
-			$data['title'] = "404 Page Not Found!";
-			$data['settings'] = $setting;
-			// Partners
-			$data['partners'] = $this->home_model->getPartner();
+		
 
-			// Social Links
-			$data['sociallinks'] = $this->home_model->getSocialLinks();
+		// Get Website Settings
+		$setting = $this->home_model->getWebsiteSettings();
+		$data['title'] = "Home | " . $setting['name'];
+		$data['logo'] = $setting['logo'];
+		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_background'] = $setting['footer_background'];
+		$data['footer_about'] = $setting['footer_about'];
+		$data['footer_map'] = $setting['footer_map'];
+		$data['footer_copyright'] = $setting['footer_copyright'];
+
+		$data['alt'] = $setting['name'];
+		$data['settings'] = $setting;
+
+		// Sliders
+		$data['sliders'] = $this->home_model->getWebsiteSliders();
+
+		// Main Navbar
+		$data['navigations'] = $this->home_model->getNavigation();
+
+		// Our Services
+		$data['services'] = $this->home_model->getCategoryProduct(3);
+
+		// Our Counter
+		$data['counters'] = $this->home_model->getCounters();
+
+		// Our Counter Background
+		$data['countersbackground'] = $this->home_model->getCountersBackground();
+
+
+		// About
+		$data['about'] = $this->home_model->getAboutContent();
+
+	
+		// Gallery
+		$data['galleries'] = $this->home_model->getGallery();
+
+		// Facilities
+		$data['facilities'] = $this->home_model->getfacilities();
+
+		// Gallery Category
+		$data['galleriescat'] = $this->home_model->getGalleryCategory();
+
+		// Partners
+		$data['partners'] = $this->home_model->getPartner();
+
+		// Blogs
+		$data['blog4home'] = $this->home_model->getBlogsOnly(3);
+
+		
+		// Rooms
+		$data['room4home'] = $this->home_model->getRoomsOnly(6);
+
+		// Testiminials
+		$data['testimonials'] = $this->home_model->getTestimonials(6);
+
+		// Testiminials
+		$data['testiBackground'] = $this->home_model->getTestiBackground();
+
+		// Footer Menu
+		$data['quick_links'] = $this->home_model->getFooterMenu(6);
+
+		// Social Links
+		$data['sociallinks'] = $this->home_model->getSocialLinks();
+
+		// Contact About
+		$data['contactabout'] = $this->home_model->getContactAbout();
+
 
 			$this->load->view('includes/header', $data);
 			$this->load->view('includes/navigation', $data);
@@ -107,27 +148,78 @@ class Room extends CI_Controller
 			// room Page
 			$RoomData = $this->home_model->getSeoURLRooms($seourl);
 
-			// Get Website Settings
-			$setting = $this->home_model->getWebsiteSettings();
-			$data['title'] = "Home | " . $setting['name'];
-			$data['logo'] = $setting['logo'];
-			$data['footer_logo'] = $setting['footer_logo'];
-			$data['footer_about'] = $setting['footer_about'];
-			$data['alt'] = $setting['name'];
-			$data['settings'] = $setting;
-
-			// Sliders
-			$data['room'] = $RoomData;
+			
 		
+
+		// Get Website Settings
+		$setting = $this->home_model->getWebsiteSettings();
+		$data['title'] = "Home | " . $setting['name'];
+		$data['logo'] = $setting['logo'];
+		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_background'] = $setting['footer_background'];
+		$data['footer_about'] = $setting['footer_about'];
+		$data['footer_map'] = $setting['footer_map'];
+		$data['footer_copyright'] = $setting['footer_copyright'];
+
+		$data['alt'] = $setting['name'];
+		$data['settings'] = $setting;
+
+		// Sliders
+		$data['sliders'] = $this->home_model->getWebsiteSliders();
+
+		// Main Navbar
+		$data['navigations'] = $this->home_model->getNavigation();
+
+		// Our Services
+		$data['services'] = $this->home_model->getCategoryProduct(3);
+
+		// Our Counter
+		$data['counters'] = $this->home_model->getCounters();
+
+		// Our Counter Background
+		$data['countersbackground'] = $this->home_model->getCountersBackground();
+
+
+		// About
+		$data['about'] = $this->home_model->getAboutContent();
+
 	
-			$data['metatags'] = $RoomData[0]->metatags;
+		// Gallery
+		$data['galleries'] = $this->home_model->getGallery();
 
-			// Partners
-			$data['partners'] = $this->home_model->getPartner();
+		// Facilities
+		$data['facilities'] = $this->home_model->getfacilities();
 
-			// Social Links
-			$data['sociallinks'] = $this->home_model->getSocialLinks();
+		// Gallery Category
+		$data['galleriescat'] = $this->home_model->getGalleryCategory();
 
+		// Partners
+		$data['partners'] = $this->home_model->getPartner();
+
+		// Blogs
+		$data['blog4home'] = $this->home_model->getBlogsOnly(3);
+
+		
+		// Rooms
+		$data['room4home'] = $this->home_model->getRoomsOnly(6);
+
+		// Testiminials
+		$data['testimonials'] = $this->home_model->getTestimonials(6);
+
+		// Testiminials
+		$data['testiBackground'] = $this->home_model->getTestiBackground();
+
+		// Footer Menu
+		$data['quick_links'] = $this->home_model->getFooterMenu(6);
+
+		// Social Links
+		$data['sociallinks'] = $this->home_model->getSocialLinks();
+
+		// Contact About
+		$data['contactabout'] = $this->home_model->getContactAbout();
+
+			$data['room'] = $RoomData;
+			
 			$this->load->view('includes/header', $data);
 			$this->load->view('includes/navigation', $data);
 			$this->load->view('room_view', $data);

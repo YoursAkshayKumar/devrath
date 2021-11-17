@@ -50,6 +50,16 @@
       z-index: 0;
      }
 
+     
+ .bgr-footer {
+  background: url('<?php echo base_url();?><?php echo $footer_background; ?>') !important;  
+  background-size: cover !important;
+  position: relative; 
+}
+
+
+
+
     .bg-10 {
     background-image: url('<?php echo base_url();?>assets/devrath/images/statics/<?php echo $countersbackground[0]->file; ?>') !important;  
     }

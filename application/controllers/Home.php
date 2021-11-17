@@ -62,7 +62,11 @@ class Home extends CI_Controller
 		$data['title'] = "Home | " . $setting['name'];
 		$data['logo'] = $setting['logo'];
 		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_background'] = $setting['footer_background'];
 		$data['footer_about'] = $setting['footer_about'];
+		$data['footer_map'] = $setting['footer_map'];
+		$data['footer_copyright'] = $setting['footer_copyright'];
+
 		$data['alt'] = $setting['name'];
 		$data['settings'] = $setting;
 
@@ -85,8 +89,7 @@ class Home extends CI_Controller
 		// About
 		$data['about'] = $this->home_model->getAboutContent();
 
-		
-
+	
 		// Gallery
 		$data['galleries'] = $this->home_model->getGallery();
 
@@ -112,10 +115,14 @@ class Home extends CI_Controller
 		// Testiminials
 		$data['testiBackground'] = $this->home_model->getTestiBackground();
 
-	
+		// Footer Menu
+		$data['quick_links'] = $this->home_model->getFooterMenu(6);
 
 		// Social Links
 		$data['sociallinks'] = $this->home_model->getSocialLinks();
+
+		// Contact About
+		$data['contactabout'] = $this->home_model->getContactAbout();
 
 		$this->load->view('includes/header', $data);
 		$this->load->view('includes/navigation', $data);

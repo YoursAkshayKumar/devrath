@@ -15,9 +15,12 @@ class Home_model extends CI_Model
                 'phone' => $result[0]->contact,
                 'email' => $result[0]->email,
                 'footer_about' => $result[0]->footer_about,
-                'logo' => 'assets/images/credit/' . $result[0]->file_path,
-                'footer_logo' => 'assets/images/credit/' . $result[0]->footer_logo,
+                'logo' => 'assets/devrath/images/setting/' . $result[0]->file_path,
+                'footer_logo' => 'assets/devrath/images/setting/' . $result[0]->footer_logo,
                 'address' => $result[0]->address,
+                'footer_background' => 'assets/devrath/images/setting/' . $result[0]->footer_background,
+                'footer_map' => $result[0]->footer_map,
+                'footer_copyright' => $result[0]->footer_copyright,
             );
             return $setting;
         }
@@ -328,6 +331,66 @@ class Home_model extends CI_Model
         }
         return false;
     }
+
+
+
+    
+    // Footer 
+    // Footer ===========================
+    public function getFooterMenu($no)
+    {
+        $query = $this->db->order_by('sort', 'ASC')->get('footer_menu_one', $no);
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+    // Footer  background===========================
+    public function getFooterBackground()
+    {
+        $query = $this->db->order_by('id', 'DESC')->get('footer_background');
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+
+    // Footer  map===========================
+    public function getFooterMap()
+    {
+        $query = $this->db->order_by('id', 'DESC')->get('footer_map');
+
+        if ($query->num_rows() > 0) {
+            $results = $query->result();
+            return $results;
+        }
+        return false;
+    }
+
+
+       // Coontact About Section===========================
+       public function getContactAbout()
+       {
+           $query = $this->db->order_by('id', 'DESC')->get('contactabout');
+   
+           if ($query->num_rows() > 0) {
+               $results = $query->result();
+               return $results;
+           }
+           return false;
+       }
+    
+
+
+
+
+
 
 
 

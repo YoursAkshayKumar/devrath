@@ -59,21 +59,19 @@ class Banquet extends CI_Controller
     );
 
 
-
-
     
+		// Get Website Settings
+		$setting = $this->home_model->getWebsiteSettings();
+		$data['title'] = "Home | " . $setting['name'];
+		$data['logo'] = $setting['logo'];
+		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_background'] = $setting['footer_background'];
+		$data['footer_about'] = $setting['footer_about'];
+		$data['footer_map'] = $setting['footer_map'];
+		$data['footer_copyright'] = $setting['footer_copyright'];
 
-       
-
-        // // Get Website Settings
-        $setting = $this->home_model->getWebsiteSettings();
-        $data['title'] = "Home | " . $setting['name'];
-        $data['logo'] = $setting['logo'];
-        $data['footer_logo'] = $setting['footer_logo'];
-        $data['footer_about'] = $setting['footer_about'];
-        $data['alt'] = $setting['name'];
-        $data['settings'] = $setting;
-
+		$data['alt'] = $setting['name'];
+		$data['settings'] = $setting;
 
         // Main Navbar
         $data['navigations'] = $this->home_model->getNavigation();

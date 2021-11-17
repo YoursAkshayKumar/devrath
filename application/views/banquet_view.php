@@ -42,7 +42,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                     <span class="sales">-20%</span>
                                 </div>
                             
@@ -66,7 +66,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -88,7 +88,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -110,7 +110,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -131,7 +131,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -153,7 +153,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -175,7 +175,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -197,7 +197,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -230,7 +230,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                     <span class="sales">-20%</span>
                                 </div>
                             
@@ -254,7 +254,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -276,7 +276,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -298,7 +298,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -319,7 +319,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -341,7 +341,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -363,7 +363,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -385,7 +385,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -418,7 +418,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                     <span class="sales">-20%</span>
                                 </div>
                             
@@ -442,7 +442,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -464,7 +464,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -486,7 +486,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -507,7 +507,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -529,7 +529,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -551,7 +551,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -573,7 +573,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -606,7 +606,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                     <span class="sales">-20%</span>
                                 </div>
                             
@@ -630,7 +630,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -652,7 +652,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -674,7 +674,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -695,7 +695,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -717,7 +717,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -739,7 +739,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -761,7 +761,7 @@
                             <div class="restaurant_item small-thumbs">
                             
                                 <div class="img">
-                                    <a href="#"><img src="images/restaurants/img-1.jpg" alt=""></a>
+                                    <a href="#"><img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt=""></a>
                                 </div>
                             
                                 <div class="text">
@@ -869,8 +869,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope suite dining col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -879,8 +879,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope  ground bathroom suite col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -889,8 +889,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope  ground bathroom dining col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -899,8 +899,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope suite dining col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -909,8 +909,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope  ground suite dining col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -919,8 +919,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope ground bathroom dining col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -929,8 +929,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope ground suite dining col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -939,8 +939,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope bathroom suite dining col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -949,8 +949,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope bathroom suite dining col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -959,8 +959,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -969,8 +969,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope ground bathroom suite col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -979,8 +979,8 @@
                     <!-- ITEM -->
                     <div class="item-isotope ground bathroom col-xs-6 col-sm-6 col-md-4 col-lg-3">
                         <div class="gallery_item">
-                            <a href="images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
-                                <img src="images/restaurants/img-1.jpg" alt="">
+                            <a href="<?php echo base_url(); ?>/assets/devrath/images/gallery/popup/img-1.jpg" class="gallery-popup mfp-image">
+                                <img src="<?php echo base_url(); ?>/assets/devrath/images/restaurants/img-1.jpg" alt="">
                             </a>
                         </div>
                     </div>

@@ -38,11 +38,12 @@ class Settings extends Admin_Base_Controller
             // $crud->add_fields('name', 'reg', 'established', 'address', 'founder', 'slogan', 'footer_about', 'contact', 'file_path', 'footer_logo', 'cre_or_up_date', 'cre_or_up_by');
 
             // Update form
-            $crud->edit_fields('status', 'name', 'established', 'address', 'founder', 'slogan', 'footer_about', 'email', 'contact', 'file_path', 'footer_logo', 'cre_or_up_date', 'cre_or_up_by');
+            $crud->edit_fields('status', 'name', 'established', 'address', 'founder', 'slogan', 'footer_about', 'footer_map', 'footer_copyright', 'email', 'contact', 'file_path', 'footer_logo', 'footer_background', 'cre_or_up_date', 'cre_or_up_by');
 
             //File upload
-            $crud->set_field_upload('file_path', 'assets/images/credit');
-            $crud->set_field_upload('footer_logo', 'assets/images/credit');
+            $crud->set_field_upload('file_path', 'assets/devrath/images/setting');
+            $crud->set_field_upload('footer_logo', 'assets/devrath/images/setting');
+            $crud->set_field_upload('footer_background', 'assets/devrath/images/setting');
 
             // Unset, hide fields
             $crud->change_field_type('cre_or_up_date', 'invisible')
@@ -51,6 +52,8 @@ class Settings extends Admin_Base_Controller
             // Unset, hide fields from view page
             $crud->unset_read_fields('cre_or_up_by');
             $crud->unset_texteditor(['footer_about', 'full_text']);
+            $crud->unset_texteditor(['footer_map', 'full_text']);
+            $crud->unset_texteditor(['footer_copyright', 'full_text']);
 
             // Required fields
             $crud->required_fields('name', 'reg', 'established', 'address', 'contact', 'email');
@@ -58,6 +61,8 @@ class Settings extends Admin_Base_Controller
             // Rename field level
             $crud->display_as('file_path', ' Logo(w180 x h54)');
             $crud->display_as('footer_logo', 'Footer Logo(w180 x h54)');
+            $crud->display_as('footer_background', 'Footer background(w1920 x h360)');
+
             $crud->display_as('name', ' Name');
             $crud->display_as('reg', ' Registration Code');
             $crud->display_as('cre_or_up_date', 'Created Date');
@@ -68,6 +73,7 @@ class Settings extends Admin_Base_Controller
                 ->callback_before_update(array($this, 'custom_data_update_callback'))
                 ->callback_read_field('file_path', array($this, '_callback_view_photo'))
                 ->callback_read_field('footer_logo', array($this, '_callback_view_photo'))
+                ->callback_read_field('footer_background', array($this, '_callback_view_photo'))
                 ->callback_read_field('status', array($this, '_callback_status'));
 
             $crud->unset_add();
@@ -114,7 +120,7 @@ class Settings extends Admin_Base_Controller
     // view user image in column
     public function _callback_view_photo($value, $row)
     {
-        $image_url = base_url('assets/images/credit/' . $value);
+        $image_url = base_url('assets/devrath/images/setting/' . $value);
         return "<a href=$image_url class='fancybox'><img class='img-responsive img-thumbnail' src=$image_url  width='100px'/></a>";
     }
 

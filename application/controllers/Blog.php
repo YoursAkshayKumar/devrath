@@ -106,14 +106,21 @@ class Blog extends CI_Controller
 			// Blog Page
 			$BlogData = $this->home_model->getSeoURLPages($seourl);
 
-			// Get Website Settings
-			$setting = $this->home_model->getWebsiteSettings();
-			$data['title'] = "Home | " . $setting['name'];
-			$data['logo'] = $setting['logo'];
-			$data['footer_logo'] = $setting['footer_logo'];
-			$data['footer_about'] = $setting['footer_about'];
-			$data['alt'] = $setting['name'];
-			$data['settings'] = $setting;
+		// Get Website Settings
+		$setting = $this->home_model->getWebsiteSettings();
+		$data['title'] = "Home | " . $setting['name'];
+		$data['logo'] = $setting['logo'];
+		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_background'] = $setting['footer_background'];
+		$data['footer_about'] = $setting['footer_about'];
+		$data['footer_map'] = $setting['footer_map'];
+		$data['footer_copyright'] = $setting['footer_copyright'];
+
+		$data['alt'] = $setting['name'];
+		$data['settings'] = $setting;
+
+
+
 
 			// Sliders
 			$data['blog'] = $BlogData;

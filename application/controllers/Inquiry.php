@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Gallery extends CI_Controller
+class Contact extends CI_Controller
 {
     function __construct()
     {
@@ -9,11 +9,44 @@ class Gallery extends CI_Controller
         $this->load->model('home_model');
     }
 
+    public function send()
+    {
+        $secretKey = "6LeqV7MZAAAAAGzqaiKMCQI2Z5wAEJkIA0zFxIeP";
+        $ip = $_SERVER['REMOTE_ADDR'];
+        $captcha = $_POST['g-recaptcha-response'];
+        // post request to server
+        $url = 'https://www.google.com/recaptcha/api/siteverify?secret=' . urlencode($secretKey) .  '&response=' . urlencode($captcha);
+        $response = file_get_contents($url);
+        $responseKeys = json_decode($response, true);
+        // should return JSON with success as true
+        if ($responseKeys["success"]) {
+            $contactData = array(
+                'name' => (!empty($_POST['form_name'])) ? $_POST['form_name'] : NULL,
+                'email' => $_POST['form_email'],
+                'phone' => (!empty($_POST['form_phone'])) ? $_POST['form_phone'] : NULL,
+                'subject' => $_POST['form_subject'],
+                'message' => $_POST['form_message'],
+                'created' => date('Y-m-d h:i:s'),
+            );
+            $ID = $this->db->insert('contactus', $contactData);
+            if ($ID) {
+                $this->session->set_flashdata('msg', '<div class="alert alert-success">We will get back to you soon, Thank You!</div>');
+            } else {
+                $this->session->set_flashdata('msg', '<div class="alert alert-danger">Something went wrong, Try again!</div>');
+            }
+        } else {
+            $this->session->set_flashdata('msg', '<div class="alert alert-danger">reCapcha error, Try again!</div>');
+        }
+
+        redirect('contact-us');
+    }
+
     public function index()
     {
         $data['metatags'] = array();
 
-        
+     
+
         $data['styles'] = array(
             '<link href="http://fonts.googleapis.com/css?family=Hind:400,300,500,600%7cMontserrat:400,700" rel="stylesheet"
                 type="text/css">',
@@ -38,13 +71,10 @@ class Gallery extends CI_Controller
 
 
     $data['scripts'] = array(
-
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery-1.11.0.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery-ui.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/bootstrap.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/bootstrap-select.js" type="text/javascript" ></script>',
-        ' <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true"></script>',
-        '<script  src="' . base_url() . 'assets/devrath/js/lib/isotope.pkgd.min.js" type="text/javascript"></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.themepunch.revolution.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.themepunch.tools.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/owl.carousel.js" type="text/javascript" ></script>',
@@ -54,18 +84,17 @@ class Gallery extends CI_Controller
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.parallax-1.1.3.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.magnific-popup.min.js" type="text/javascript" ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/SmoothScroll.js" type="text/javascript" ></script>',
+    
+        '<script uery.f' . base_url() . 'assets/devrath/orm.min.js" type="text/javascript" src="js/lib/jq ></script>',
         '<script  src="' . base_url() . 'assets/devrath/js/lib/jquery.validate.min.js" type="text/javascript" ></script>',
+    
         '<script  src="' . base_url() . 'assets/devrath/js/scripts.js" type="text/javascript" ></script>',
     );
 
 
 
 
-    
-
-       
-
-      // Get Website Settings
+		// Get Website Settings
 		$setting = $this->home_model->getWebsiteSettings();
 		$data['title'] = "Home | " . $setting['name'];
 		$data['logo'] = $setting['logo'];
@@ -74,7 +103,8 @@ class Gallery extends CI_Controller
 		$data['footer_about'] = $setting['footer_about'];
 		$data['footer_map'] = $setting['footer_map'];
 		$data['footer_copyright'] = $setting['footer_copyright'];
-        $data['alt'] = $setting['name'];
+
+		$data['alt'] = $setting['name'];
 		$data['settings'] = $setting;
 
 		// Sliders
@@ -89,8 +119,14 @@ class Gallery extends CI_Controller
 		// Our Counter
 		$data['counters'] = $this->home_model->getCounters();
 
-        // Our Counter Background
+		// Our Counter Background
 		$data['countersbackground'] = $this->home_model->getCountersBackground();
+
+
+		// About
+		$data['about'] = $this->home_model->getAboutContent();
+
+		
 
 		// Gallery
 		$data['galleries'] = $this->home_model->getGallery();
@@ -107,10 +143,6 @@ class Gallery extends CI_Controller
 		// Blogs
 		$data['blog4home'] = $this->home_model->getBlogsOnly(3);
 
-        // About
-		$data['about'] = $this->home_model->getAboutContent();
-
-
 		
 		// Rooms
 		$data['room4home'] = $this->home_model->getRoomsOnly(6);
@@ -118,23 +150,23 @@ class Gallery extends CI_Controller
 		// Testiminials
 		$data['testimonials'] = $this->home_model->getTestimonials(6);
 
-		
-		// Testiminials
-		$data['teamMember'] = $this->home_model->getTeams();
-
-
-
 		// Testiminials
 		$data['testiBackground'] = $this->home_model->getTestiBackground();
 
-	
+		// Footer Menu
+		$data['quick_links'] = $this->home_model->getFooterMenu(6);
 
 		// Social Links
 		$data['sociallinks'] = $this->home_model->getSocialLinks();
 
+        // Contact About
+		$data['contactabout'] = $this->home_model->getContactAbout();
+
+        
+
         $this->load->view('includes/header', $data);
         $this->load->view('includes/navigation', $data);
-        $this->load->view('gallery_view', $data);
+        $this->load->view('inquiry_view', $data);
         $this->load->view('includes/footer', $data);
     }
 }

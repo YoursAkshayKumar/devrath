@@ -1,6 +1,6 @@
  
     <!-- CHECK AVAILABILITY -->
-    <section class="section-check-availability availability-style-2 clearfix">
+    <!-- <section class="section-check-availability availability-style-2 clearfix">
         <div class="container">
             <div class="check-availability">
                 <div class="ot-heading">
@@ -30,7 +30,7 @@
                 </form>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- END / CHECK AVAILABILITY -->
 
     <!-- ACCOMMODATIONS -->

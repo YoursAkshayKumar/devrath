@@ -62,7 +62,11 @@ class About extends CI_Controller
 		$data['title'] = "Home | " . $setting['name'];
 		$data['logo'] = $setting['logo'];
 		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_background'] = $setting['footer_background'];
 		$data['footer_about'] = $setting['footer_about'];
+		$data['footer_map'] = $setting['footer_map'];
+		$data['footer_copyright'] = $setting['footer_copyright'];
+
 		$data['alt'] = $setting['name'];
 		$data['settings'] = $setting;
 
@@ -78,8 +82,14 @@ class About extends CI_Controller
 		// Our Counter
 		$data['counters'] = $this->home_model->getCounters();
 
-        // Our Counter Background
+		// Our Counter Background
 		$data['countersbackground'] = $this->home_model->getCountersBackground();
+
+
+		// About
+		$data['about'] = $this->home_model->getAboutContent();
+
+		
 
 		// Gallery
 		$data['galleries'] = $this->home_model->getGallery();
@@ -96,10 +106,6 @@ class About extends CI_Controller
 		// Blogs
 		$data['blog4home'] = $this->home_model->getBlogsOnly(3);
 
-        // About
-		$data['about'] = $this->home_model->getAboutContent();
-
-
 		
 		// Rooms
 		$data['room4home'] = $this->home_model->getRoomsOnly(6);
@@ -107,16 +113,11 @@ class About extends CI_Controller
 		// Testiminials
 		$data['testimonials'] = $this->home_model->getTestimonials(6);
 
-		
-		// Testiminials
-		$data['teamMember'] = $this->home_model->getTeams();
-
-
-
 		// Testiminials
 		$data['testiBackground'] = $this->home_model->getTestiBackground();
 
-	
+		// Footer Menu
+		$data['quick_links'] = $this->home_model->getFooterMenu(6);
 
 		// Social Links
 		$data['sociallinks'] = $this->home_model->getSocialLinks();

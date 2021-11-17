@@ -25,7 +25,7 @@ foreach ( $css_files as $file ): ?>
 
 <style>
     .sidebar-menu>li>a {
-    padding: 7px 5px 7px 14px  !important;
+    padding: 5px 5px 5px 14px  !important;
     display: block;
     }
 

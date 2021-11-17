@@ -29,13 +29,21 @@ class Error extends CI_Controller
 			'<script src="' . base_url() . 'assets/frontend/js/custom.js"></script>',
 		);
 
+	
 		// Get Website Settings
 		$setting = $this->home_model->getWebsiteSettings();
 		$data['title'] = "Home | " . $setting['name'];
 		$data['logo'] = $setting['logo'];
 		$data['footer_logo'] = $setting['footer_logo'];
+		$data['footer_background'] = $setting['footer_background'];
 		$data['footer_about'] = $setting['footer_about'];
+		$data['footer_map'] = $setting['footer_map'];
+		$data['footer_copyright'] = $setting['footer_copyright'];
+
 		$data['alt'] = $setting['name'];
+		$data['settings'] = $setting;
+
+		
 
 		// Main Navbar
 		$data['navigations'] = $this->home_model->getNavigation();

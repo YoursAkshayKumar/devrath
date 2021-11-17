@@ -26,7 +26,7 @@
                     </li>
                 </ul>
             </li> -->
-<!-- 
+            <!-- 
             <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
@@ -52,19 +52,20 @@
             </ul>
           </li> -->
 
+       
 
-    
+
 
 
 
 
             <li class="treeview menu-open">
-           
+
                 <a href="<?php echo site_url('admin/navigation'); ?>">
                     <i class="fa fa-list-alt"></i> <span>Navigation</span>
                     <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-                 </span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
 
                 <ul class="treeview-menu" style="">
@@ -101,12 +102,32 @@
             </li>
 
 
-            
+
             <li class="treeview">
                 <a href="<?php echo site_url('admin/rooms'); ?>">
                     <i class="fa fa-book"></i> <span>Rooms</span>
                 </a>
             </li>
+
+
+            <li class="treeview menu-open">
+
+                <a href="<?php echo site_url('admin/banquet'); ?>">
+                    <i class="fa fa-list-alt"></i> <span>Banquet</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+
+                <ul class="treeview-menu" style="">
+                    <li><a href="<?php echo site_url('admin/banquet'); ?>"><i class="fa fa-list-alt"></i>Banquet</a></li>
+                    <!-- <li><a href="<?php echo site_url('admin/categories'); ?>"><i class="fa fa-list-alt"></i> Sub-Menu</a></li>
+                    <li><a href="<?php echo site_url('admin/sub_categories'); ?>"><i class="fa fa-list-alt"></i>Sub Sub-Menu</a></li> -->
+
+                </ul>
+            </li>
+
+
 
             <li class="treeview">
                 <a href="<?php echo site_url('admin/sliders'); ?>">
@@ -115,28 +136,28 @@
             </li>
 
 
- 
-     
+
+
             <li class="treeview">
                 <a href="<?php echo site_url('admin/facilities'); ?>">
                     <i class="fa fa-bookmark-o"></i> <span>Facilities</span>
                 </a>
             </li>
 
-            
+
             <li class="treeview menu-open">
-           
+
                 <a href="<?php echo site_url('admin/gallery'); ?>">
                     <i class="fa fa-list-alt"></i> <span>Gallery</span>
                     <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-                 </span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
 
                 <ul class="treeview-menu" style="">
                     <li><a href="<?php echo site_url('admin/gallerycategory'); ?>"><i class="fa fa-photo"></i>Gallery Category</a></li>
                     <li><a href="<?php echo site_url('admin/gallery'); ?>"><i class="fa fa-photo"></i> Gallery</a></li>
-                    
+
                 </ul>
             </li>
 
@@ -159,20 +180,20 @@
             </li>
 
 
-                       
+
             <li class="treeview menu-open">
-           
+
                 <a href="#">
                     <i class="fa fa-user"></i> <span>Testimonials</span>
                     <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-                 </span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
 
                 <ul class="treeview-menu" style="">
                     <li><a href="<?php echo site_url('admin/testimonial'); ?>"><i class="fa fa-user"></i>Testimonials</a></li>
                     <li><a href="<?php echo site_url('admin/testi_image'); ?>"><i class="fa fa-picture-o"></i>Testimonials Background</a></li>
-                    
+
 
                 </ul>
             </li>
@@ -188,18 +209,18 @@
             </li>
 
             <li class="treeview menu-open">
-                
+
                 <a href="#">
                     <i class="fa fa-clock-o"></i> <span>Counters</span>
                     <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
+                        <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
 
                 <ul class="treeview-menu" style="">
                     <li><a href="<?php echo site_url('admin/counters'); ?>"><i class="fa fa-user"></i>Counters</a></li>
                     <li><a href="<?php echo site_url('admin/countersbackground'); ?>"><i class="fa fa-picture-o"></i>Counters Background</a></li>
-                    
+
 
                 </ul>
             </li>
@@ -211,12 +232,49 @@
                     <i class="fa fa-clock-o"></i> <span>Counters</span>
                 </a>
             </li> -->
-
+<!-- 
             <li class="treeview">
                 <a href="<?php echo site_url('admin/contactus'); ?>">
                     <i class="fa fa-envelope-o"></i> <span>Contact Us</span>
                 </a>
+            </li> -->
+
+            <li class="treeview menu-open">
+
+                <a href="<?php echo site_url('admin/contactus'); ?>">
+                    <i class="fa fa-list-alt"></i> <span>Contact Us</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+
+                <ul class="treeview-menu" style="">
+                    <li><a href="<?php echo site_url('admin/contactus'); ?>"><i class="fa fa-list-alt"></i>Form Entries</a></li>
+                    <li><a href="<?php echo site_url('admin/contact_about'); ?>"><i class="fa fa-list-alt"></i>About Section</a></li>
+                   
+                </ul>
             </li>
+
+
+
+            <li class="treeview menu-open">
+
+                <a href="<?php echo site_url('admin/footerbackground'); ?>">
+                    <i class="fa fa-list-alt"></i> <span>Footer</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+
+                <ul class="treeview-menu" style="">
+                    <li><a href="<?php echo site_url('admin/footerbackground'); ?>"><i class="fa fa-list-alt"></i>Footer Background</a></li>
+                    <li><a href="<?php echo site_url('admin/footer_menuone'); ?>"><i class="fa fa-list-alt"></i>Footer Quick Links</a></li>
+                    <li><a href="<?php echo site_url('admin/footer_map'); ?>"><i class="fa fa-list-alt"></i>Footer Map</a></li>
+                    
+                </ul>
+            </li>
+
+
 
             <li class="treeview">
                 <a href="<?php echo site_url('admin/settings'); ?>">
